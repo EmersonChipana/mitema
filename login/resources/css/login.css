@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&display=swap');
+/* Configuracion general */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Anek Telugu', sans-serif;
+}
+span {
+  font-size: 14px;
+  color: #757575;
+}
+#kc-header-wrapper, #kc-page-title {
+    display: none;
+}
+/* Configuración fondo */
+body {
+    background-image: url('../img/fondo-login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+/* Configuración form */
+#kc-content-wrapper {
+    width: 400px;
+    min-width: 400px;
+    background: #fff;
+    border-radius: 3px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px auto;
+}
+/* Elementos del form */
+.kcFormGroupClass {
+    margin-bottom: 15px;
+}
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+#kc-registration {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+/* Configuración logo */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  background-image: url('../img/logo.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 60px;
+}
+/* Configuración link <a>*/
+a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #989898;
+  text-decoration: none;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+a:focus {
+  outline: none !important;
+}
+a:hover {
+  text-decoration: none;
+  color: #7BC8CA;
+}
+/* Titulos, label, input */
+/* Título */
+.login100-form-title {
+    display: block;
+    font-weight: 700;
+    font-size: 28px;
+    color: #3d3d3d;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+/* Label del formulario*/
+.label-input100 {
+  font-size: 12px;
+  color: #757575;
+  font-weight: 700;
+}
+/* Configuración campos input */
+input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: #ededed solid 1px;
+  transition: border-color 1s;
+  padding: 2px 10px;
+  padding-left: 30px;
+  font-size: 14px;
+  color: #757575;
+}
+input:focus {
+    border-color: #66CDAA;
+}
+input::before {
+    width: 100%;
+    height: 2px; /* Grosor del borde inferior */
+    background-color: #ededed; /* Color inicial del borde inferior */
+    transform: scaleX(0); /* Inicialmente, la línea está colapsada */
+    transform-origin: left; /* El punto de inicio de la transformación es la izquierda */
+    transition: transform 1s ease; /* Transición de izquierda a derecha */
+}
+input:focus::before {
+    transform: scaleX(1); /* Cuando se enfoca, la línea se expande de izquierda a derecha */
+    background-color: #66CDAA; /* Cambia el color al enfocar */
+}
+textarea {
+    outline: none;
+    border: none;
+}
+/* Placeholder que desaparezaca */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+/* Color previo de placeholder */
+input::-webkit-input-placeholder {
+    color: #adadad;
+}
+input:-moz-placeholder {
+    color: #adadad;
+}
+input::-moz-placeholder {
+    color: #adadad;
+}
+input:-ms-input-placeholder {
+    color: #adadad;
+}
+textarea::-webkit-input-placeholder {
+    color: #adadad;
+}
+textarea:-moz-placeholder {
+    color: #adadad;
+}
+textarea::-moz-placeholder {
+    color: #adadad;
+}
+textarea:-ms-input-placeholder {
+    color: #adadad;
+}
+/* Botones */
+#kc-login, #kc-register-button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+#kc-login:hover, #kc-register-button:hover, input[type="submit"]:hover {
+  cursor: pointer;
+}
+.kcButtonClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+#kc-form-buttons {
+  width: 80%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.login100-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: #66CDAA;
+    top: 0;
+    left: -100%;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+#kc-login:hover, #kc-register-button:hover {
+    background: #66C19E;
+}
+#kc-form-buttons:hover .login100-form-bgbtn {
+    left: 0;
+}
+
+/* Configuración de los iconos */
+/* eye */
+.input-content {
+  position: relative;
+}
+#eye, #eye-confirm {
+  position: absolute;
+  cursor: pointer;
+  color: #adadad;
+  font-size: 20px;
+  z-index: 999;
+  padding-left: 5px;
+}
+/* Iconos */
+.focus-input100 {
+  position: absolute;
+  font-weight: 500;
+}
+.focus-input100::after {
+  content: attr(data-symbol);
+  font-family: Material-Design-Iconic-Font;
+  color: #adadad;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 20px);
+  padding-left: 10px;
+}
+/* Detalles */
+#kc-login, #kc-register-button {
+  padding-left: 10px;
+}
+.return-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #757575;
+}
+/*Checkbox*/
+.admin-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+.admin-checkbox + label {
+    cursor: pointer;
+    text-decoration: none;
+}
+.admin-checkbox + label:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #66CDAA;
+    background-color: #fff;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+.admin-checkbox:checked + label:before {
+    background-color: #66CDAA;
+}
+.admin-checkbox:checked + label:before {
+    content: "\2713"; /* Código de caracter Unicode del icono de check */
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+}
+/*---------------------------------------------------------------------------------------------------*/
+.login {
+	position: relative;
+}
+.login:before,
+.login__circuit-mask {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 882px;
+	height: 665px;
+}
+.login:before {
+	background: url('../img/circuit.svg');
+}
+.login__circuit-mask {
+	display: grid;
+	place-items: center;
+	-webkit-mask: url('../img/circuit.svg');
+	mask: url('../img/circuit.svg');
+}
+.login__circuit-mask:before {
+	content: '';
+	position: absolute;
+	width: 105px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: onda 6s infinite;
+	animation-delay: 2s;
+}
+.login__heading {
+	text-align: center;
+}
+@keyframes onda {
+	0% {
+		transform: scale(1);
+	}
+	90% {
+		transform: scale(8);
+	}
+	100% {
+		transform: scale(8);
+	}
+}
+.checkbox input {
+  width: auto;
+  margin: 0 5px 3px 0;
+}
+.checkbox label {
+  display: flex;
+  align-items: center;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+.label-remember {
+  font-size: 14px;
+  font-weight: bold;
+  color: #989898;
+  text-decoration: none;
+}
